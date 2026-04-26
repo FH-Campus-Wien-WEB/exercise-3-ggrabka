@@ -31,6 +31,60 @@ ul {
 
 /* Task 2.1. Lay out the childs of the 'body' using Grid Template Areas. */
 
+#page {
+  min-height: 100vh;
+
+  display: grid;
+  gap: 1em;
+
+  grid-template-columns: minmax(192px, 256px) auto;
+  grid-template-rows: minmax(64px, 128px) auto minmax(64px, 128px);
+
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "foot foot";
+}
+
+@media(max-width: 56em) {
+ #page{
+    min-height: 100vh;
+
+  display: grid;
+  gap: 1em;
+
+  grid-template-columns: auto;
+  grid-template-rows: minmax(64px, 128px) auto auto minmax(64px, 128px);
+
+  grid-template-areas:
+    "head"
+    "nav"
+    "main"
+    "foot";
+ }
+}
+
+#page > header {
+  grid-area: head;
+  background-color: #ff8c8c;
+}
+
+#page > nav {
+  grid-area: nav;
+  background-color: #f6bd2c;
+}
+
+#page > main {
+  grid-area: main;
+  background-color: #8cffa0;
+  overflow-y: auto;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: #cf8cffe8;
+}
+
 
 /* Task 3.1. Make the header element a flex container and center its children
    vertically and horizontally.
