@@ -2,7 +2,9 @@ function setMovie(movie) {
 
   for (const element of document.forms[0].elements) {
     const name = element.id;
+    console.log("The name passed to movie[name]" + name);
     const value = movie[name];
+    console.log(value);
     
     if (name === "Genres") {
       const options = element.options;
@@ -70,12 +72,15 @@ function putMovie() {
 
 /** Loading and setting the movie data for the movie with the passed imdbID */
 const imdbID = new URLSearchParams(window.location.search).get("imdbID");
+console.log(imdbID);
 
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "/movies/" + imdbID);
 xhr.onload = function() {
   if (xhr.status === 200) {
-    setMovie(JSON.parse(xhr.responseText));
+    const movie = JSON.parse(xhr.responseText);
+    console.log(movie);
+    setMovie(movie);
   } else {
     alert("Loading of movie data failed. Status was " + xhr.status + " - " + xhr.statusText);
   } 

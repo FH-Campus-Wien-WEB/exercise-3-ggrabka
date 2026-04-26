@@ -1,11 +1,69 @@
 @import url(base.css);
 
 input,
-select,
 textarea {
   width: 100%;
 }
 
 div {
   margin: 4px 0px;
+}
+
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 8px;
+  font-size: 14px;
+}
+
+label {
+  font-weight: bold;
+  color: #DBA506;
+}
+
+button {
+  margin: 15px;
+  padding: 10px;
+  background-color: #DBA506;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-form > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.movie-form label {
+  width: 120px;
+  font-weight: bold;
+}
+
+.movie-form input, .movie-form select,
+.movie-form textarea {
+  flex: 1;
+  padding: 6px;
+}
+
+.back-btn, .save-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #DBA506;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover, .save-btn:hover {
+  background-color: white;
+  color: #DBA506;
 }
