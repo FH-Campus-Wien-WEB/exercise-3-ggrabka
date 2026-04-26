@@ -72,7 +72,8 @@ ul {
   align-items:center;
   justify-content: center;
   grid-area: head;
-  background-color: #ff8c8c;
+  color: #DBA506;
+  border: 1px solid #DBA506;
 }
 
 /* Task 3.2. Make the list items of the unordered list in the nav element a flex container, 
@@ -81,7 +82,7 @@ ul {
 
 #page > nav {
   grid-area: nav;
-  background-color: #f6bd2c;
+  border: 1px solid #DBA506;
 }
 
 #page > nav ul li {
@@ -97,16 +98,25 @@ ul {
   display: flex;
   flex-direction: row;
  flex-wrap: wrap;
-  align-items: flex-start;
-  background-color: #8cffa0;
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid #DBA506;
   overflow-y: auto;
 }
 
 /* Task 3.4. Make the footer's ul a Flexbox container */
 
 #page > footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-area: foot;
-  background-color: #cf8cffe8;
+  border: 1px solid #DBA506;
+}
+
+#page > footer p {
+color:#DBA506;
 }
 
 #page > footer ul li {
@@ -121,15 +131,19 @@ img {
 }
 
 article {
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #DBA506;
   border-radius: 16px;
   padding: 16px;
   width: 384px;
+  height: auto;
   margin: 8px;
 }
 
 a {
-  color: beige;
+  color: #DBA506;
 }
 
 span {
@@ -138,8 +152,7 @@ span {
 
 .genre {
   padding: 4px 8px;
-  border: solid black 1px;
+  border: solid #DBA506 1px;
   border-radius: 6px;
-  background-color: darkgray;
-  font-weight: bold;
+  background-color: #DBA506;
 }
