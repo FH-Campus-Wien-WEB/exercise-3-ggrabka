@@ -64,42 +64,56 @@ ul {
  }
 }
 
+/* Task 3.1. Make the header element a flex container and center its children
+   vertically and horizontally.
+ */
 #page > header {
+  display:flex;
+  align-items:center;
+  justify-content: center;
   grid-area: head;
   background-color: #ff8c8c;
 }
+
+/* Task 3.2. Make the list items of the unordered list in the nav element a flex container, 
+   use column direction and center the child items
+ */
 
 #page > nav {
   grid-area: nav;
   background-color: #f6bd2c;
 }
 
+#page > nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Task 3.3. Make the main element a Flexbox container */
+
 #page > main {
   grid-area: main;
+  display: flex;
+  flex-direction: row;
+ flex-wrap: wrap;
+  align-items: flex-start;
   background-color: #8cffa0;
   overflow-y: auto;
 }
+
+/* Task 3.4. Make the footer's ul a Flexbox container */
 
 #page > footer {
   grid-area: foot;
   background-color: #cf8cffe8;
 }
 
-
-/* Task 3.1. Make the header element a flex container and center its children
-   vertically and horizontally.
- */
-
-
-/* Task 3.2. Make the list items of the unordered list in the nav element a flex container, 
-   use column direction and center the child items
- */
-
-/* Task 3.3. Make the main element a Flexbox container */
-
-
-/* Task 3.4. Make the footer's ul a Flexbox container */
-
+#page > footer ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* From here on styling from exercise 1 */
 img {
